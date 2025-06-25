@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme variables */
+  --light-foreground-rgb: 0, 0, 0;
+  --light-background-start-rgb: 255, 255, 255;
+  --light-background-end-rgb: 245, 245, 245;
+
+  /* Dark theme variables */
+  --dark-foreground-rgb: 255, 255, 255;
+  --dark-background-start-rgb: 20, 21, 22;
+  --dark-background-end-rgb: 20, 21, 22;
+}
+
+:root.light {
+  --foreground-rgb: var(--light-foreground-rgb);
+  --background-start-rgb: var(--light-background-start-rgb);
+  --background-end-rgb: var(--light-background-end-rgb);
+}
+
+:root.dark {
+  --foreground-rgb: var(--dark-foreground-rgb);
+  --background-start-rgb: var(--dark-background-start-rgb);
+  --background-end-rgb: var(--dark-background-end-rgb);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #228B22;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #17631a;
+}
